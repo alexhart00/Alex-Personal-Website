@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <div>
-      <nav className="flex justify-between items-center bg-gray-800 text-white p-4">
+      <nav className="flex justify-between items-center bg-sky-950 text-white p-4 ">
         <div className="text-2xl font-bold">My Portfolio</div>
         <ul className="flex gap-[24px]">
           <li onClick={() => handleClickScroll("Profile")}>Profile</li>
@@ -44,10 +44,8 @@ export default function Home() {
       <div id="Profile">
           <h2 className="text-3xl font-bold">Profile</h2>
           <p className="text-lg">This is my profile section. Here you can find information about me.</p>
-          <p>My name is Josh Scott. I am a software engineer with experience in web development, data science, and machine learning.</p>
-          <p>I have a passion for creating innovative solutions and improving user experiences.</p>
-          <p>In my free time, I enjoy learning new technologies and working on personal projects.</p>
-          <p>Feel free to reach out to me on social media or through my contact information below.</p>
+          <p>My name is Josh Scott. Marketing Guru with experience in web development, data science, and machine learning.</p>
+          
           <p>My skills include:</p>
       </div>
       <div id="WorkExperience">
@@ -57,7 +55,7 @@ export default function Home() {
 
       </div>
       </main>
-      <footer className="flex justify-between items-center bg-gray-800 text-white p-4">
+      <footer className="flex justify-between items-center bg-sky-950 text-white p-4">
         <div id="Social">
         <ul className="flex gap-[24px]">
           <li><Link href="https://www.linkedin.com/in/josh-o-scott/" prefetch={false}><Image src = "https://www.linkedin.com/favicon.ico" width={60} height={60} alt="linkedin Logo"/></Link></li>
