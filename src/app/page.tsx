@@ -1,5 +1,6 @@
 'use client'
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from 'react'
@@ -7,11 +8,13 @@ import { useState } from 'react'
 export default function Home() {
 
   const [count, setCount] = useState(0);
+  const currentYear = new Date().getFullYear();
   const maxImages = 6;
 
   const handleClick = () => {
     setCount((prevCount) => (prevCount + 1) % maxImages);
   };
+
   
 
   const handleClickScroll = (id: string) => {
@@ -23,8 +26,8 @@ export default function Home() {
 
   return (
     <div>
-      <nav className="flex justify-between items-center bg-sky-950 text-white p-4 ">
-        <div className="text-2xl font-bold">My Portfolio</div>
+      <nav className="flex justify-between items-center bg-sky-950 text-white p-6">
+        <div className="text-2xl font-bold">Josh Scott's Portfolio</div>
         <ul className="flex gap-[24px]">
           <li onClick={() => handleClickScroll("Profile")}>Profile</li>
           <li onClick={() => handleClickScroll("WorkExperience")}>Work Experience</li>
@@ -34,36 +37,77 @@ export default function Home() {
       </nav>
       <header className="flex flex-col items-center">
         <div>
-        <h1 className="text-4xl font-bold">Welcome to My Portfolio</h1>
-        <p className="text-lg">Explore my work and projects</p>
-        <button onClick={handleClick}><Image src={`/PlaceHolder${count}.png`} width={400} height={600} alt="Profile Picture" /></button>
+        <h1 className="text-4xl font-bold p-4">Welcome to My Portfolio</h1>
+        <button onClick={handleClick} className ="outline-6  outline-yellow-600"><Image src={`/PlaceHolder${count}.png`} width={400} height={600} alt="Profile Picture" /></button>
         <p>You clicked {count} times</p>
         </div>
       </header>
       <main className="flex flex-col items-center">
-      <div id="Profile">
-          <h2 className="text-3xl font-bold">Profile</h2>
+        
+        <div id="Profile" className="items-center">
+          <h2 className="text-3xl font-bold left-justify">Profile</h2>
           <p className="text-lg">This is my profile section. Here you can find information about me.</p>
-          <p>My name is Josh Scott. Marketing Guru with experience in web development, data science, and machine learning.</p>
-          
+          <p>My name is Josh Scott.</p>
           <p>My skills include:</p>
-      </div>
-      <div id="WorkExperience">
-
-      </div>
-      <div id="Projects">
-
-      </div>
-      </main>
-      <footer className="flex justify-between items-center bg-sky-950 text-white p-4">
-        <div id="Social">
-        <ul className="flex gap-[24px]">
-          <li><Link href="https://www.linkedin.com/in/josh-o-scott/" prefetch={false}><Image src = "https://www.linkedin.com/favicon.ico" width={60} height={60} alt="linkedin Logo"/></Link></li>
-          <li><Link href="https://www.facebook.com/profile.php?id=100009625337073" prefetch={false}><Image src = "https://www.facebook.com/favicon.ico" width={60} height={60} alt="Facebook Logo"/></Link></li>
-        </ul>
-          
-          
         </div>
+
+        <div id="WorkExperience">
+          <h2 className="text-3xl font-bold">Work Experience</h2>
+          <p className="text-lg">This is my work experience section. Here you can find information about my work experience.</p>
+          <p>My work experience includes:</p>
+        </div>
+    
+        <div id="Projects">
+          <div className="flex flex-col items-center">
+            <h2 className="text-3xl font-bold">Projects</h2>
+            <p className="text-lg">Here are some of my Marketing Projects:</p>
+            <h2>
+              <p className="text-lg">This is my project section. Here you can find information about my projects.</p>
+            </h2>
+            <Carousel className = "size-1/2 rounded-lg">
+              <div>
+                  <img src="/PlaceHolderProject1.png" alt="image2"/>
+                  <p className="legend">Image 1</p>
+              </div>
+
+              <div>
+                  <img src="/PlaceHolderProject2.png" alt="image2"/>
+                  <p className="legend">Image 2</p>
+              </div>
+
+              <div>
+                  <img src="/PlaceHolderProject3.png" alt="image3"/>
+                  <p className="legend">Image 3</p>
+              </div>
+
+              <div>
+                  <img src="/PlaceHolderProject4.png" alt="image4"/>
+                  <p className="legend">Image 4</p>
+              </div>
+
+              <div>
+                  <img src="/PlaceHolderProject5.png" alt="image5"/>
+                  <p className="legend">Image 5</p>
+              </div>
+            </Carousel>
+          </div>
+        </div>
+      </main>
+      <footer className="flex justify-between items-center bg-sky-950 text-white mt-20 ">
+
+        <div id="Social" className="flex flex-col pl-20">
+          <h2 className="text-3xl font-bold p-2">Social</h2>
+          <ul className="flex gap-[24px] p-2">
+            <li><Link href="https://www.linkedin.com/in/josh-o-scott/" prefetch={false}><Image src = "https://www.linkedin.com/favicon.ico" width={60} height={60} alt="linkedin Logo"/></Link></li>
+            <li><Link href="https://www.facebook.com/profile.php?id=100009625337073" prefetch={false}><Image src = "https://www.facebook.com/favicon.ico" width={60} height={60} alt="Facebook Logo"/></Link></li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col pr-20">
+          <p className="text-lg">Contact me at: Josh's Email</p>
+          <p className="text-lg">© {currentYear} Alex Hart. All rights reserved.</p>
+        </div>
+
       </footer>
     </div>
   );
