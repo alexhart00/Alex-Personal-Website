@@ -100,6 +100,7 @@ export default function Home() {
           <ul className="flex gap-[24px] p-2">
             <li><Link href="https://www.linkedin.com/in/josh-o-scott/" prefetch={false}><Image src = "https://www.linkedin.com/favicon.ico" width={60} height={60} alt="linkedin Logo"/></Link></li>
             <li><Link href="https://www.facebook.com/profile.php?id=100009625337073" prefetch={false}><Image src = "https://www.facebook.com/favicon.ico" width={60} height={60} alt="Facebook Logo"/></Link></li>
+            <li><Link href="https://www.tiktok.com/" prefetch={false}><Image src = "https://www.tiktok.com/favicon.ico" width={60} height={60} alt="Facebook Logo"/></Link></li>
           </ul>
         </div>
 
