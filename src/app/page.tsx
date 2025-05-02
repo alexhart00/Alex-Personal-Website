@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from 'react'
 import React from 'react';
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
+import {Accordion, AccordionItem} from "@heroui/accordion";
 
 
 export default function Home() {
@@ -19,8 +18,6 @@ export default function Home() {
     setCount((prevCount) => (prevCount + 1) % maxImages);
   };
 
-  
-
   const handleClickScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -32,51 +29,50 @@ export default function Home() {
     <div>
       <nav className="flex justify-between items-center bg-sky-950 text-white p-6 drop-shadow-md">
         <div className="text-2xl font-bold">Josh Scott's Portfolio</div>
-        <ul className="flex gap-[24px]">
+        <ul className="flex gap-[24px] font-bold">
           <li onClick={() => handleClickScroll("Profile")}>Profile</li>
           <li onClick={() => handleClickScroll("WorkExperience")}>Work Experience</li>
           <li onClick={() => handleClickScroll("Projects")}>Projects</li>
           <li onClick={() => handleClickScroll("Social")}>Social</li>
         </ul>
       </nav>
-      <header className="flex flex-col items-center bg-zinc-900 p-6">
+      
+      <header className="flex flex-col items-center bg-zinc-900 p-12 outline-6 outline-white-600 drop-shadow-md bg-[url(/BackgroundTemp.jpg)] bg-opacity-10">
         <div>
         <h1 className="text-3xl font-bold p-4 ">Welcome to My Portfolio</h1>
         <button onClick={handleClick} className ="outline-6  outline-yellow-600"><Image src={`/PlaceHolder${count}.png`} width={400} height={600} alt="Profile Picture" /></button>
+        
         <p>You clicked {count} times</p>
         </div>
       </header>
-      <main className="flex flex-col items-center bg-zinc-900 pb-20">
-
-      <div> // This is a comment might have to remove or change later
-        <h4>Popup - GeeksforGeeks</h4>
-        <Popup  trigger={<button className="bg-blue-500 text-white px-4 py-2 rounded"> Click to open modal</button>} modal nested>
-          {
-            ((close: () => void) => (
-              <div className="modal bg-white p-6 rounded shadow-md">
-                <h3 className="text-lg font-semibold mb-2">Modal Title</h3>
-                <p>This is the content inside the modal.</p>
-                <div className="mt-4 text-right"> <button onClick={close} className="bg-gray-500 text-white px-3 py-1 rounded"> Close Modal  </button></div>            
-              </div>
-            )) as unknown as React.ReactNode
-          }
-        </Popup>
-    </div>
+      <main className="flex flex-col items-center bg-zinc-900 pb-20 outline-6 outline-white-600 drop-shadow-md">
         
-        <div id="Profile" className="items-center">
+        <div id="Profile" className="mt-12 mb-12 items-center ">
           <h2 className="text-3xl font-bold left-justify">Profile</h2>
           <p className="text-lg">This is my profile section. Here you can find information about me.</p>
           <p>My name is Josh Scott.</p>
           <p>My skills include:</p>
         </div>
 
-        <div id="WorkExperience">
-          <h2 className="text-3xl font-bold">Work Experience</h2>
-          <p className="text-lg">This is my work experience section. Here you can find information about my work experience.</p>
-          <p>My work experience includes:</p>
+        <div id="WorkExperience" className="mt-12 mb-12">
+          <p className="text-4xl font-bold">Work Experience</p>
+
+          <div className="flex flex-col outline-6 outline-yellow-600 rounded-lg p-4 min-w-[800px] max-w-[1200px]">
+            <ul className="flex justify-around p-2 items-center">
+              <li><Image src = "https://www.linkedin.com/favicon.ico" width={60} height={60} alt="CompanyNameLogo"/></li>
+              <li>Company Name + logo</li>
+              <li>Position:</li>
+              <li>Duration:</li>
+            </ul>
+            <Accordion>
+              <AccordionItem className="pl-4 font-bold" key="1" aria-label="Accordion 1" title="More Details" >
+              <p className="font-thin">Details about my working experience</p>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </div>
     
-        <div id="Projects">
+        <div id="Projects" className="mt-12 mb-12">
           <div className="flex flex-col items-center">
             <h2 className="text-3xl font-bold">Projects</h2>
             <p className="text-lg">Here are some of my Marketing Projects:</p>
@@ -114,8 +110,8 @@ export default function Home() {
       </main>
       <footer className="flex justify-between items-center bg-sky-950 text-white">
 
-        <div id="Social" className="flex flex-col pl-20">
-          <h2 className="text-3xl font-bold p-2">Social</h2>
+        <div id="Social" className="flex flex-col pl-20 pr-20">
+          <h2 className="text-3xl font-bold p-6">Social</h2>
           <ul className="flex gap-[24px] p-2">
             <li><Link href="https://www.linkedin.com/in/josh-o-scott/" prefetch={false}><Image src = "https://www.linkedin.com/favicon.ico" width={60} height={60} alt="linkedin Logo"/></Link></li>
             <li><Link href="https://www.facebook.com/profile.php?id=100009625337073" prefetch={false}><Image src = "https://www.facebook.com/favicon.ico" width={60} height={60} alt="Facebook Logo"/></Link></li>
