@@ -46,6 +46,7 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col items-center bg-zinc-900 pb-20 outline-6 outline-yellow-600 drop-shadow-md">
+
         <div id="Profile" className="mt-12 mb-12 items-center ">
           <div className="justify-left p-6">
             <p className="text-4xl font-bold">Profile</p>
@@ -112,24 +113,23 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
+
       </main>
+
       <footer className="flex justify-between items-center bg-sky-950 text-white pb-6">
 
-        <div id="Social" className="flex flex-col pl-20">
-          <h2 className="text-3xl font-bold p-6">Social:</h2>
-          <ul className="flex gap-[24px] p-2">
-            <li><Link href="https://www.linkedin.com/in/josh-o-scott/" prefetch={false}><Image src = "https://www.linkedin.com/favicon.ico" width={60} height={60} alt="linkedin Logo"/></Link></li>
-            <li><Link href="https://www.facebook.com/profile.php?id=100009625337073" prefetch={false}><Image src = "https://www.facebook.com/favicon.ico" width={60} height={60} alt="Facebook Logo"/></Link></li>
-            <li><Link href="https://www.tiktok.com/" prefetch={false}><Image src = "https://www.tiktok.com/favicon.ico" width={60} height={60} alt="Facebook Logo"/></Link></li>
-          </ul>
+        <div id="Social" className="p-6 pl-20">
+            <Link href="https://www.linkedin.com/in/josh-o-scott/" prefetch={false}><Image src = "https://www.linkedin.com/favicon.ico" width={60} height={60} alt="linkedin Logo"/></Link>
         </div>
 
-        <div className="flex flex-col pr-20 drop-shadow-md">
+        <div className="flex flex-col pr-20 drop-shadow-md items-center">
           <p className="text-lg">Contact me at: Josh's Email</p>
           <p className="text-lg">© {currentYear} Alex Hart. All rights reserved.</p>
+          <Link className= "text-1x1 font-bold"href="/about" prefetch={false}>About the Dev</Link>
         </div>
-
+        
       </footer>
+
     </div>
   );
 }
