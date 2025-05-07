@@ -129,20 +129,20 @@ export default function Home() {
                   <p className="legend">Image 1</p>
               </div>
               <div>
-                  <Image src="/PlaceHolderProject2.png" width={800} height={450} alt="image2" className="w-full h-auto"/>
+                  <img src="/PlaceHolderProject2.png" width={800} height={450} alt="image2" className="w-full h-auto"/>
                   <p className="legend">Image 2</p>
               </div>
               <div>
-                  <Image src="/PlaceHolderProject3.png" width={800} height={450} alt="image3" className="w-full h-auto"/>
+                  <img src="/PlaceHolderProject3.png" width={800} height={450} alt="image3" className="w-full h-auto"/>
                   <p className="legend">Image 3</p>
               </div>
               <div>
-                  <Image src="/PlaceHolderProject4.png" width={800} height={450} alt="image4" className="w-full h-auto"/>
+                  <img src="/PlaceHolderProject4.png" width={800} height={450} alt="image4" className="w-full h-auto"/>
                   <p className="legend">Image 4</p>
               </div>
 
               <div>
-                  <Image src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="w-full h-auto"/>
+                  <img src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="w-full h-auto"/>
                   <p className="legend">Image 5</p>
               </div>
             </Carousel>
