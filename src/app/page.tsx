@@ -15,7 +15,6 @@ export default function Home() {
   const maxImages = 6;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
   const handleClick = () => {
     setCount((prevCount) => (prevCount + 1) % maxImages);
   };
@@ -24,10 +23,7 @@ export default function Home() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false); // Close menu on mobile when clicking
-    }
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false);
     }
   };
 
@@ -53,10 +49,10 @@ export default function Home() {
         {/* Mobile Dropdown Menu */}
         <div className={`absolute top-16 right-4 bg-sky-950 rounded-lg p-4 md:hidden transition-transform transform ${isMenuOpen ? "scale-100" : "scale-0"}`}>
           <ul className="flex flex-col gap-4 font-bold">
-            <li className="cursor-pointer hover:text-yellow-400" onClick={() => { handleClickScroll("Profile"); setIsMenuOpen(false); }}>Profile</li>
-            <li className="cursor-pointer hover:text-yellow-400" onClick={() => { handleClickScroll("WorkExperience"); setIsMenuOpen(false); }}>Work Experience</li>
-            <li className="cursor-pointer hover:text-yellow-400" onClick={() => { handleClickScroll("Projects"); setIsMenuOpen(false); }}>Projects</li>
-            <li className="cursor-pointer hover:text-yellow-400" onClick={() => { handleClickScroll("Social"); setIsMenuOpen(false); }}>Social</li>
+            <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Profile")}>Profile</li>
+            <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("WorkExperience")}>Work Experience</li>
+            <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Projects")}>Projects</li>
+            <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Social")}>Social</li>
           </ul>
         </div>
 
