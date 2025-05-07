@@ -125,24 +125,24 @@ export default function Home() {
             <div className="flex flex-col items-center rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] font-bold bg-sky-900 text-white shadow-black shadow-md">
             <Carousel className = "rounded-lg p-4 sm:p-6 min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[800px] w-full" showArrows={true} showStatus={false} showIndicators={false} infiniteLoop={true} autoPlay={true} interval={3000} transitionTime={1000}>
               <div>
-                  <img src="/PlaceHolderProject1.png" width={800} height={450} alt="image2" className="w-full h-auto"/>
+                  <img src="/PlaceHolderProject1.png" width={800} height={450} alt="image2" className="flex-1"/>
                   <p className="legend">Image 1</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject2.png" width={800} height={450} alt="image2" className="w-full h-auto"/>
+                  <img src="/PlaceHolderProject2.png" width={800} height={450} alt="image2" className="flex-1"/>
                   <p className="legend">Image 2</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject3.png" width={800} height={450} alt="image3" className="w-full h-auto"/>
+                  <img src="/PlaceHolderProject3.png" width={800} height={450} alt="image3" className="flex-1"/>
                   <p className="legend">Image 3</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject4.png" width={800} height={450} alt="image4" className="w-full h-auto"/>
+                  <img src="/PlaceHolderProject4.png" width={800} height={450} alt="image4" className="flex-1"/>
                   <p className="legend">Image 4</p>
               </div>
 
               <div>
-                  <img src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="w-full h-auto"/>
+                  <img src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="flex-1"/>
                   <p className="legend">Image 5</p>
               </div>
             </Carousel>
