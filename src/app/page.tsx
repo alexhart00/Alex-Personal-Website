@@ -36,12 +36,10 @@ export default function Home() {
 
         <p className="text-2xl font-bold">Josh Scott&apos;s Portfolio</p>
         
-        {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button className="text-white focus:outline-none" onClick={handleMenuToggle}> ☰ </button>
         </div>
         
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 font-bold">
           <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Profile")}>Profile</li>
           <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("WorkExperience")}>Work Experience</li>
@@ -49,7 +47,6 @@ export default function Home() {
           <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Social")}>Social</li>
         </ul>
 
-        {/* Mobile Dropdown Menu */}
         <div className={`absolute top-16 right-4 bg-sky-950 rounded-lg p-4 transition-opacity duration-300 ease-in-out transform outline-4 outline-yellow-600 rounded-lg${isMenuOpen ? "visible opacity-100 z-10" : "invisible opacity-0"}`}>
           <ul className="flex flex-col gap-4 font-bold text-center">
             <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("Profile")}>Profile</li>
@@ -132,20 +129,20 @@ export default function Home() {
                   <p className="legend">Image 1</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject2.png" width={800} height={450} alt="image2" className="w-full h-auto"/>
+                  <Image src="/PlaceHolderProject2.png" width={800} height={450} alt="image2" className="w-full h-auto"/>
                   <p className="legend">Image 2</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject3.png" width={800} height={450} alt="image3" className="w-full h-auto"/>
+                  <Image src="/PlaceHolderProject3.png" width={800} height={450} alt="image3" className="w-full h-auto"/>
                   <p className="legend">Image 3</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject4.png" width={800} height={450} alt="image4" className="w-full h-auto"/>
+                  <Image src="/PlaceHolderProject4.png" width={800} height={450} alt="image4" className="w-full h-auto"/>
                   <p className="legend">Image 4</p>
               </div>
 
               <div>
-                  <img src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="w-full h-auto"/>
+                  <Image src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="w-full h-auto"/>
                   <p className="legend">Image 5</p>
               </div>
             </Carousel>
