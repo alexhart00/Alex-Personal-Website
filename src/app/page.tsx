@@ -1,11 +1,12 @@
 'use client'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from 'react'
-import React from 'react';
 import {Accordion, AccordionItem} from "@heroui/accordion";
+import { Menu, X, ChevronDown } from "lucide-react";
+
 
 
 
@@ -77,7 +78,8 @@ export default function Home() {
               This is my profile section. Here you can find information about me.
             </p>
           </div>
-          <ul className="text-xl md:text-2xl p-4 flex flex-col gap-4 outline-6 outline-yellow-600 rounded-lg bg-sky-950 w-full max-w-[1000px] shadow-yellow-600 shadow-xl">
+          <div className="text-xl md:text-2xl p-4 flex flex-col gap-4 outline-6 outline-yellow-600 rounded-lg bg-sky-950 w-full max-w-[1000px] shadow-yellow-600 shadow-xl">
+          <ul className="text-xl md:text-2xl p-4 flex flex-col gap-4 rounded-lg bg-sky-900 w-full max-w-[1000px] shadow-black shadow-md">
             <li>Josh&apos;s Name or Nickname:</li>
             <li>Josh&apos;s Summary/About:</li>
             <li>Josh&apos;s Interests and Hobbies:</li>
@@ -85,6 +87,7 @@ export default function Home() {
             <li>Josh&apos;s Contact Information:</li>
             <li>Josh&apos;s My skills include:</li>
           </ul>
+          </div>
         </div>
 
         <div id="WorkExperience" className="mt-6 mb-6 w-full max-w-[1000px]">
@@ -93,7 +96,7 @@ export default function Home() {
             <p className="text-xl md:text-3xl mt-2">See where I have worked!</p>
           </div>
           <div className="flex flex-col outline-6 outline-yellow-600 rounded-lg p-6 w-full max-w-[1000px] bg-sky-950 font-bold shadow-xl shadow-yellow-600">
-            <ul className="flex flex-wrap justify-center md:justify-between p-4 items-center gap-6 md:gap-8 rounded-lg bg-sky-900 text-white">
+            <ul className="flex flex-wrap justify-center md:justify-between p-4 items-center gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md">
               <li className="text-xl md:text-2xl flex items-center gap-3">
                 <Image src="https://www.linkedin.com/favicon.ico" width={40} height={40} alt="CompanyNameLogo" className="w-12 h-12 md:w-16 md:h-16"/>
                 <span className="font-semibold">Company Name + logo</span>
@@ -115,13 +118,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="Projects" className="mt-12 mb-12 flex flex-col">
+        <div id="Projects" className="mt-6 mb-6 w-full max-w-[1000px]">
           <div className="justify-left p-6">
             <p className="text-3xl sm:text-4xl font-bold">Projects</p>
             <p className="text-xl sm:text-2xl">Here are some of my Marketing Projects:</p>
           </div>
           <div className="flex flex-col items-center outline-6 outline-yellow-600 rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] bg-sky-950 font-bold shadow-yellow-600 shadow-xl">
-            <Carousel className = "rounded-lg bg-sky-950 p-4 sm:p-6 min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[800px] w-full" showArrows={true} showStatus={false} showIndicators={false} infiniteLoop={true} autoPlay={true} interval={3000} transitionTime={1000}>
+            <div className="flex flex-col items-center rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] font-bold bg-sky-900 text-white shadow-black shadow-md">
+            <Carousel className = "rounded-lg p-4 sm:p-6 min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[800px] w-full" showArrows={true} showStatus={false} showIndicators={false} infiniteLoop={true} autoPlay={true} interval={3000} transitionTime={1000}>
               <div>
                   <img src="/PlaceHolderProject1.png" width={800} height={450} alt="image2" className="w-full h-auto"/>
                   <p className="legend">Image 1</p>
@@ -144,6 +148,7 @@ export default function Home() {
                   <p className="legend">Image 5</p>
               </div>
             </Carousel>
+          </div>
           </div>
         </div>
       </main>
