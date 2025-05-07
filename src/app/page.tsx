@@ -59,11 +59,11 @@ export default function Home() {
       </nav>
 
       
-      <header className="flex flex-col  bg-zinc-900 p-12 outline-6 outline-yellow-600 drop-shadow-md bg-[url(/BackgroundTemp.jpg)] bg-opacity-10">
+      <header className="flex flex-col  bg-zinc-900 p-12 outline-6 outline-yellow-600 drop-shadow-md bg-[url(/BackgroundTemp.jpg)] bg-opacity-10 bg-cover bg-center shadow-yellow-600 shadow-xl">
       
         <div className="flex flex-col items-center">
           <h1 className="text-5xl font-bold p-4">Josh Scott</h1>
-          <button onClick={handleClick} className ="outline-6  outline-yellow-600"><div className="w-full max-w-[400px] h-auto sm:h-[600px]"><Image src={`/PlaceHolder${count}.png`} width={400} height={600} alt="Profile Picture" /></div></button>
+          <button onClick={handleClick} className ="outline-6  outline-yellow-600 shadow-yellow-600 shadow-xl"><div className="w-full max-w-[400px] h-auto sm:h-[600px]"><Image src={`/PlaceHolder${count}.png`} width={400} height={600} alt="Profile Picture" /></div></button>
         </div>
 
       </header>
@@ -77,7 +77,7 @@ export default function Home() {
               This is my profile section. Here you can find information about me.
             </p>
           </div>
-          <ul className="text-xl md:text-2xl p-4 flex flex-col gap-4 outline-6 outline-yellow-600 rounded-lg bg-sky-950 w-full max-w-[1000px]">
+          <ul className="text-xl md:text-2xl p-4 flex flex-col gap-4 outline-6 outline-yellow-600 rounded-lg bg-sky-950 w-full max-w-[1000px] shadow-yellow-600 shadow-xl">
             <li>Josh&apos;s Name or Nickname:</li>
             <li>Josh&apos;s Summary/About:</li>
             <li>Josh&apos;s Interests and Hobbies:</li>
@@ -92,29 +92,35 @@ export default function Home() {
             <p className="text-3xl md:text-4xl font-bold">Work Experience</p>
             <p className="text-xl md:text-3xl mt-2">See where I have worked!</p>
           </div>
-          <div className="flex flex-col outline-6 outline-yellow-600 rounded-lg p-4 w-full max-w-[1000px] bg-sky-950 font-bold">
-            <ul className="flex flex-wrap justify-center md:justify-between p-4 items-center gap-4 md:gap-0">
-              <li><Image src="https://www.linkedin.com/favicon.ico" width={40} height={40} alt="CompanyNameLogo" className="w-12 h-12 md:w-16 md:h-16"/></li>
-              <li className="text-xl md:text-2xl">Company Name + logo</li>
-              <li className="text-xl md:text-2xl">Position:</li>
-              <li className="text-xl md:text-2xl">Duration:</li>
-            </ul>
-            <Accordion>
-              <AccordionItem className="pl-4 font-bold" key="1" aria-label="Accordion 1" title="More Details">
-                <p className="font-thin text-base md:text-lg">Details about my working experience</p>
-              </AccordionItem>
-            </Accordion>
+          <div className="flex flex-col outline-6 outline-yellow-600 rounded-lg p-6 w-full max-w-[1000px] bg-sky-950 font-bold shadow-xl shadow-yellow-600">
+            <ul className="flex flex-wrap justify-center md:justify-between p-4 items-center gap-6 md:gap-8 rounded-lg bg-sky-900 text-white">
+              <li className="text-xl md:text-2xl flex items-center gap-3">
+                <Image src="https://www.linkedin.com/favicon.ico" width={40} height={40} alt="CompanyNameLogo" className="w-12 h-12 md:w-16 md:h-16"/>
+                <span className="font-semibold">Company Name + logo</span>
+              </li>
+              <li className="text-xl md:text-2xl flex items-center gap-3">
+                <span className="font-semibold">Position:</span>
+                <span>Software Engineer</span>
+              </li>
+              <li className="text-xl md:text-2xl flex items-center gap-3">
+                <span className="font-semibold">Duration:</span>
+                <span>Jan 2020 - Present</span>
+              </li>
+              <Accordion className="mt-6">
+                <AccordionItem className="pl-4 font-bold text-white" key="1" aria-label="Accordion 1" title="More Details">
+                  <p className="font-thin text-base md:text-lg">Details about my working experience</p>
+                </AccordionItem>
+              </Accordion>
+            </ul>            
           </div>
         </div>
-        <img src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="w-full h-auto"/>
-        <Image src="/PlaceHolderProject3.png" width={800} height={450} alt="image5" className="w-full h-auto"/>
 
         <div id="Projects" className="mt-12 mb-12 flex flex-col">
           <div className="justify-left p-6">
             <p className="text-3xl sm:text-4xl font-bold">Projects</p>
             <p className="text-xl sm:text-2xl">Here are some of my Marketing Projects:</p>
           </div>
-          <div className="flex flex-col items-center outline-6 outline-yellow-600 rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] bg-sky-950 font-bold">
+          <div className="flex flex-col items-center outline-6 outline-yellow-600 rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] bg-sky-950 font-bold shadow-yellow-600 shadow-xl">
             <Carousel className = "rounded-lg bg-sky-950 p-4 sm:p-6 min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[800px] w-full" showArrows={true} showStatus={false} showIndicators={false} infiniteLoop={true} autoPlay={true} interval={3000} transitionTime={1000}>
               <div>
                   <img src="/PlaceHolderProject1.png" width={800} height={450} alt="image2" className="w-full h-auto"/>
