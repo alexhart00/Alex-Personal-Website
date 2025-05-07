@@ -1,11 +1,8 @@
 'use client'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from 'react'
 import React from 'react';
-import {Accordion, AccordionItem} from "@heroui/accordion";
 
 
 export default function Home() {
