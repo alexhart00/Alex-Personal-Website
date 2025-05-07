@@ -83,27 +83,28 @@ export default function Home() {
             <p className="text-3xl md:text-4xl font-bold">Work Experience</p>
             <p className="text-xl md:text-3xl mt-2">See where I have worked!</p>
           </div>
-          <div className="flex flex-col outline-6 outline-yellow-600 rounded-lg p-6 w-full max-w-[1000px] bg-sky-950 font-bold shadow-xl shadow-yellow-600">
-            <ul className="flex flex-wrap justify-center md:justify-between p-4 items-center gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md">
+          <div className="outline-6 outline-yellow-600 rounded-lg p-6 w-full max-w-[1000px] bg-sky-950 font-semibold shadow-xl shadow-yellow-600">
+            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md">
               <li className="text-xl md:text-2xl flex items-center gap-3">
                 <Image src="https://www.linkedin.com/favicon.ico" width={40} height={40} alt="CompanyNameLogo" className="w-12 h-12 md:w-16 md:h-16"/>
-                <span className="font-semibold">Company Name + logo</span>
+                <span>logo + Company Name</span>
               </li>
-              <li className="text-xl md:text-2xl flex items-center gap-3">
-                <span className="font-semibold">Position:</span>
-                <span>Software Engineer</span>
+              <li className="text-xl md:text-2xl">
+                <span>Position: Market Man</span>
               </li>
-              <li className="text-xl md:text-2xl flex items-center gap-3">
-                <span className="font-semibold">Duration:</span>
-                <span>Jan 2020 - Present</span>
+              <li className="text-xl md:text-2xl">
+                <span>Duration: September 2025 - Present</span>
               </li>
-              <Accordion className="mt-6">
-                <AccordionItem className="pl-4 font-bold text-white" key="1" aria-label="Accordion 1" title="More Details">
+              <li className="text-xl md:text-2xl self-start">   
+              <Accordion>
+                <AccordionItem title={<span className="pl-4 font-bold flex items-center justify-between w-full">More Details</span>}  indicator={<></>} key="1" aria-label="Accordion 1">
                   <p className="font-thin text-base md:text-lg">Details about my working experience</p>
                 </AccordionItem>
               </Accordion>
+              </li>
             </ul>            
           </div>
+
         </div>
 
         <div id="Projects" className="mt-6 mb-6 w-full max-w-[1000px]">
