@@ -5,38 +5,40 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {Accordion, AccordionItem} from "@heroui/accordion";
-import { Menu, X, ChevronDown } from "lucide-react";
-
-
-
 
 export default function Home() {
 
   const [count, setCount] = useState(0);
   const maxImages = 6;
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const handleClick = () => {
     setCount((prevCount) => (prevCount + 1) % maxImages);
   };
+  
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleClickScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
+      setIsMenuOpen(false); // Close menu after clicking a link
     }
+  };
+
+  const handleMenuToggle = () => {
+    console.log("Toggling menu", isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <div>
-      <nav className="flex justify-between items-center bg-sky-950 text-white p-4 md:p-6 drop-shadow-md">
+      <nav className="flex justify-between items-center bg-sky-950 text-white p-4 md:p-6 drop-shadow-md relative z-20 outline-6 outline-yellow-600">
 
         <p className="text-2xl font-bold">Josh Scott&apos;s Portfolio</p>
         
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
-          <button className="text-white focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}> ☰ </button>
+          <button className="text-white focus:outline-none" onClick={handleMenuToggle}> ☰ </button>
         </div>
         
         {/* Desktop Menu */}
@@ -48,28 +50,27 @@ export default function Home() {
         </ul>
 
         {/* Mobile Dropdown Menu */}
-        <div className={`absolute top-16 right-4 bg-sky-950 rounded-lg p-4 md:hidden transition-transform transform ${isMenuOpen ? "scale-100" : "scale-0"}`}>
-          <ul className="flex flex-col gap-4 font-bold">
-            <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Profile")}>Profile</li>
-            <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("WorkExperience")}>Work Experience</li>
-            <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Projects")}>Projects</li>
-            <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Social")}>Social</li>
+        <div className={`absolute top-16 right-4 bg-sky-950 rounded-lg p-4 transition-opacity duration-300 ease-in-out transform outline-4 outline-yellow-600 rounded-lg${isMenuOpen ? "visible opacity-100 z-10" : "invisible opacity-0"}`}>
+          <ul className="flex flex-col gap-4 font-bold text-center">
+            <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("Profile")}>Profile</li>
+            <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("WorkExperience")}> Work Experience</li>
+            <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("Projects")}>Projects</li>
+            <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("Social")}>Social</li>
           </ul>
         </div>
-
       </nav>
 
       
-      <header className="flex flex-col  bg-zinc-900 p-12 outline-6 outline-yellow-600 drop-shadow-md bg-[url(/BackgroundTemp.jpg)] bg-opacity-10 bg-cover bg-center shadow-yellow-600 shadow-xl">
+      <header className="flex flex-col  bg-zinc-900 p-12 outline-6 outline-yellow-600 drop-shadow-md  bg-opacity-10 bg-cover bg-center bg-[url(/BackgroundTemp.jpg)] shadow-yellow-600 shadow-xl relative z-10">
       
         <div className="flex flex-col items-center">
-          <h1 className="text-5xl font-bold p-4">Josh Scott</h1>
+          <h1 className="text-5xl md:text-4xl font-bold p-4">Josh Scott</h1>
           <button onClick={handleClick} className ="outline-6  outline-yellow-600 shadow-yellow-600 shadow-xl"><div className="w-full max-w-[400px] h-auto sm:h-[600px]"><Image src={`/PlaceHolder${count}.png`} width={400} height={600} alt="Profile Picture" /></div></button>
         </div>
 
       </header>
 
-      <main className="flex flex-col items-center bg-zinc-900 pb-20 outline-6 outline-yellow-600 drop-shadow-md">
+      <main className="flex flex-col items-center bg-zinc-900 pb-20 outline-6 outline-yellow-600 drop-shadow-md relative z-10">
 
         <div id="Profile" className="mt-12 mb-12 items-center w-full max-w-[1000px]">
           <div className="p-6 text-center md:text-left">
