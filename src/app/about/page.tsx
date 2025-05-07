@@ -29,7 +29,7 @@ export default function Home() {
             <p className="text-3xl"></p>
           </div>
           <ul className="text-3xl  p-4 flex flex-col items-left  gap-4 outline-6 outline-yellow-600 rounded-lg min-w-[1000px] max-w-[1000px] bg-sky-950" >
-              <li>I'm Alexander Hart, a Software Engineering graduate from Colorado with a passion for building applications and learning new technologies. I've contributed to multiple software projects and enjoy turning ideas into real, usable tools.</li>
+              <li>I&apos;m Alexander Hart, a Software Engineering graduate from Colorado with a passion for building applications and learning new technologies. I&apos;ve contributed to multiple software projects and enjoy turning ideas into real, usable tools.</li>
               <li className=" pt-8">My talents include:</li>
               <li className="font-bold pt-8">Frontend Development</li>
                 <ul className="grid grid-cols-3 gap-4 text-1xl">

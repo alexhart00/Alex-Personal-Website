@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div>
       <nav className="flex justify-between items-center bg-sky-950 text-white p-6 drop-shadow-md">
-        <p className="text-2xl font-bold ">Josh Scott's Portfolio</p>
+        <p className="text-2xl font-bold ">Josh Scott&apos;s Portfolio</p>
           <ul className="flex gap-[24px] font-bold">
             <li onClick={() => handleClickScroll("Profile")}>Profile</li>
             <li onClick={() => handleClickScroll("WorkExperience")}>Work Experience</li>
@@ -53,12 +53,12 @@ export default function Home() {
             <p className="text-3xl">This is my profile section. Here you can find information about me.</p>
           </div>
           <ul className="text-3xl  p-4 flex flex-col items-left  gap-4 outline-6 outline-yellow-600 rounded-lg min-w-[1000px] max-w-[1000px] bg-sky-950" >
-              <li>Josh's Name or Nickname:</li>
-              <li>Josh's Summary/About:</li>
-              <li>Josh's Interests and Hobbies:</li>
-              <li>Josh's Achievements and Accomplishments:</li>
-              <li>Josh's Contact Information:</li>
-              <li>Josh's My skills include:</li>
+              <li>Josh&apos;s Name or Nickname:</li>
+              <li>Josh&apos;s Summary/About:</li>
+              <li>Josh&apos;s Interests and Hobbies:</li>
+              <li>Josh&apos;s Achievements and Accomplishments:</li>
+              <li>Josh&apos;s Contact Information:</li>
+              <li>Josh&apos;s My skills include:</li>
             </ul>
         </div>
 
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col pr-20 drop-shadow-md items-center">
-          <p className="text-lg">Contact me at: Josh's Email</p>
+          <p className="text-lg">Contact me at: Josh&apos;s Email</p>
           <p className="text-lg">© {currentYear} Alex Hart. All rights reserved.</p>
           <Link className= "text-1x1 font-bold"href="/about" prefetch={false}>About the Dev</Link>
         </div>
