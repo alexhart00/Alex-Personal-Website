@@ -106,6 +106,8 @@ export default function Home() {
             </Accordion>
           </div>
         </div>
+        <img src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="w-full h-auto"/>
+        <Image src="/PlaceHolderProject3.png" width={800} height={450} alt="image5" className="w-full h-auto"/>
 
         <div id="Projects" className="mt-12 mb-12 flex flex-col">
           <div className="justify-left p-6">
