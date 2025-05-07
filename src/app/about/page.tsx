@@ -14,7 +14,7 @@ export default function Home() {
       </nav>
       
       <header className="flex flex-col items-center bg-zinc-900 p-12 outline-6 outline-yellow-600 drop-shadow-md bg-[url(/BackgroundTemp.jpg)] bg-opacity-10">
-        <h1 className="text-5xl md:text-7xl font-bold p-4">Alexander Hart</h1>
+        <h1 className="text-4xl md:text-4xl font-bold p-4">Alexander Hart</h1>
         <Image className="outline-6 outline-yellow-600 rounded-lg" src={`/AlexProfilePic.jpg`} width={400} height={600} alt="Profile Picture"/>
       </header>
 
@@ -68,6 +68,7 @@ export default function Home() {
       </main>
       <footer className="flex justify-between items-center bg-sky-950 text-white p-4">
         <Link className="text-xl md:text-2xl font-bold underline hover:text-yellow-400 transition-colors" href="/" prefetch={false}>Back to the Main Page</Link>
+        <p className="text-xl md:text-2xl font-bold">About the Dev</p>
       </footer>
     </div>
   );

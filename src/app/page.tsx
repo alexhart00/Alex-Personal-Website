@@ -1,34 +1,24 @@
-'use client'
+"use client";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {Accordion, AccordionItem} from "@heroui/accordion";
+import { Accordion, AccordionItem } from "@heroui/accordion";
 
 export default function Home() {
-
   const [count, setCount] = useState(0);
-  const maxImages = 6;
-  const handleClick = () => {
-    setCount((prevCount) => (prevCount + 1) % maxImages);
-  };
-  
-  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const maxImages = 6;
+
+  const handleClick = () => setCount((prevCount) => (prevCount + 1) % maxImages);
 
   const handleClickScroll = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false); // Close menu after clicking a link
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
   };
 
-  const handleMenuToggle = () => {
-    console.log("Toggling menu", isMenuOpen);
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const handleMenuToggle = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <div>
@@ -55,13 +45,13 @@ export default function Home() {
             <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("Social")}>Social</li>
           </ul>
         </div>
-      </nav>
 
+      </nav>
       
       <header className="flex flex-col  bg-zinc-900 p-12 outline-6 outline-yellow-600 drop-shadow-md  bg-opacity-10 bg-cover bg-center bg-[url(/BackgroundTemp.jpg)] shadow-yellow-600 shadow-xl relative z-10">
       
         <div className="flex flex-col items-center">
-          <h1 className="text-5xl md:text-4xl font-bold p-4">Josh Scott</h1>
+          <h1 className="text-5xl md:text-5xl font-bold p-4">Josh Scott</h1>
           <button onClick={handleClick} className ="outline-6  outline-yellow-600 shadow-yellow-600 shadow-xl"><div className="w-full max-w-[400px] h-auto sm:h-[600px]"><Image src={`/PlaceHolder${count}.png`} width={400} height={600} alt="Profile Picture" /></div></button>
         </div>
 
@@ -149,6 +139,7 @@ export default function Home() {
           </div>
           </div>
         </div>
+
       </main>
 
       <footer className="flex flex-col md:flex-row justify-between items-center bg-sky-950 text-white p-6 md:py-6 md:px-20">
