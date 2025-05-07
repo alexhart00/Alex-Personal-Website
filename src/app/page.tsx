@@ -120,24 +120,24 @@ export default function Home() {
           <div className="flex flex-col items-center outline-6 outline-yellow-600 rounded-lg p-4 min-w-[1000px] max-w-[1000px] bg-sky-950 font-bold">
             <Carousel className = "rounded-lg bg-sky-950 p-6 min-h-[400px] md:min-h-[600px] lg:min-h-[800px] w-full max-w-[900px]" showArrows={true} showStatus={false} showIndicators={false} infiniteLoop={true} autoPlay={true} interval={3000} transitionTime={1000}>
               <div>
-                  <img src="/PlaceHolderProject1.png" alt="image2"/>
+                  <Image src="/PlaceHolderProject1.png" alt="image2"/>
                   <p className="legend">Image 1</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject2.png" alt="image2"/>
+                  <Image src="/PlaceHolderProject2.png" alt="image2"/>
                   <p className="legend">Image 2</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject3.png" alt="image3"/>
+                  <Image src="/PlaceHolderProject3.png" alt="image3"/>
                   <p className="legend">Image 3</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject4.png" alt="image4"/>
+                  <Image src="/PlaceHolderProject4.png" alt="image4"/>
                   <p className="legend">Image 4</p>
               </div>
 
               <div>
-                  <img src="/PlaceHolderProject5.png" alt="image5"/>
+                  <Image src="/PlaceHolderProject5.png" alt="image5"/>
                   <p className="legend">Image 5</p>
               </div>
             </Carousel>
@@ -158,7 +158,7 @@ export default function Home() {
           <p className="text-sm md:text-lg">© {new Date().getFullYear()} Alex Hart. All rights reserved.</p>
           <Link className="text-sm md:text-lg font-bold underline hover:text-yellow-400" href="/about" prefetch={false}>About the Dev</Link>
         </div>
-        
+
       </footer>
     </div>
   );
