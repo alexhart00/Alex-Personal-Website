@@ -25,7 +25,7 @@ export default function Home() {
           <p className="text-2xl mt-4"> I&apos;m Alexander Hart, a Software Engineering graduate from Colorado with a passion for building applications and learning new technologies. I&apos;ve contributed to multiple software projects and enjoy turning ideas into real, usable tools.</p>
         </div>
 
-        <ul className="text-2xl p-4 flex flex-col gap-8 outline-6 outline-yellow-600 rounded-lg bg-sky-950">
+        <ul className="text-2xl p-4 flex flex-col gap-8 outline-6 outline-yellow-600 rounded-lg bg-sky-950 shadow-yellow-600 shadow-xl">
           <li>My talents include:</li>
 
           <li className="font-bold pt-8">Frontend Development</li>
