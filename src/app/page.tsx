@@ -62,9 +62,7 @@ export default function Home() {
         <div id="Profile" className="mt-12 mb-12 items-center w-full max-w-[1000px]">
           <div className="p-6 text-center md:text-left">
             <p className="text-3xl md:text-4xl font-bold">Profile</p>
-            <p className="text-xl md:text-3xl mt-2">
-              This is my profile section. Here you can find information about me.
-            </p>
+            <p className="text-xl md:text-3xl mt-2">Josh&apos;s profile section. Here you can find information about me.</p>
           </div>
           <div className="text-xl md:text-2xl p-4 flex flex-col gap-4 outline-6 outline-yellow-600 rounded-lg bg-sky-950 w-full max-w-[1000px] shadow-yellow-600 shadow-xl">
           <ul className="text-xl md:text-2xl p-4 flex flex-col gap-4 rounded-lg bg-sky-900 w-full max-w-[1000px] shadow-black shadow-md">
@@ -73,7 +71,7 @@ export default function Home() {
             <li>Josh&apos;s Interests and Hobbies:</li>
             <li>Josh&apos;s Achievements and Accomplishments:</li>
             <li>Josh&apos;s Contact Information:</li>
-            <li>Josh&apos;s My skills include:</li>
+            <li>Josh&apos;s skills include:</li>
           </ul>
           </div>
         </div>
@@ -110,7 +108,7 @@ export default function Home() {
         <div id="Projects" className="mt-6 mb-6 w-full max-w-[1000px]">
           <div className="justify-left p-6">
             <p className="text-3xl sm:text-4xl font-bold">Projects</p>
-            <p className="text-xl sm:text-2xl">Here are some of my Marketing Projects:</p>
+            <p className="text-xl sm:text-2xl">Josh&apos;s Marketing Projects:</p>
           </div>
           <div className="flex flex-col items-center outline-6 outline-yellow-600 rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] bg-sky-950 font-bold shadow-yellow-600 shadow-xl">
             <div className="flex flex-col items-center rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] font-bold bg-sky-900 text-white shadow-black shadow-md">
