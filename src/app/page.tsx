@@ -9,15 +9,15 @@ import { Accordion, AccordionItem } from "@heroui/accordion";
 export default function Home() {
   return (
     <>
-      {navbarComponent()}
-      {profileComponent()}
-      {aboutComponent()}
-      {footerComponent()}
+      {NavbarComponent()}
+      {ProfileComponent()}
+      {AboutComponent()}
+      {FooterComponent()}
     </>
   );  
 }
 
-export function navbarComponent(){
+export function NavbarComponent(){
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuToggle = () => setIsMenuOpen(!isMenuOpen);
@@ -55,7 +55,7 @@ export function navbarComponent(){
   );
 }
 
-export function profileComponent(){
+export function ProfileComponent(){
   const maxImages = 5;
   const [profilePhotoIndex, setProfilePhotoIndex] = useState(0);
   const handleClick = () => setProfilePhotoIndex((prevIndex) => (prevIndex + 1) % maxImages);
@@ -70,7 +70,7 @@ export function profileComponent(){
   );
 }
 
-export function aboutComponent(){
+export function AboutComponent(){
   return (
     <main className="flex flex-col items-center bg-zinc-900 pb-20 outline-6 outline-yellow-600 drop-shadow-md relative z-10">
 
@@ -129,24 +129,24 @@ export function aboutComponent(){
             <div className="flex flex-col items-center rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] font-bold bg-sky-900 text-white shadow-black shadow-md">
             <Carousel className = "rounded-lg p-4 sm:p-6 min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[800px] w-full" showArrows={true} showStatus={false} showIndicators={false} infiniteLoop={true} autoPlay={true} interval={3000} transitionTime={1000}>
               <div>
-                  <img src="/PlaceHolderProject1.png" width={800} height={450} alt="image2" className="flex-1"/>
+                  <Image src="/PlaceHolderProject1.png" width={800} height={450} alt="image2" className="flex-1"/>
                   <p className="legend">Image 1</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject2.png" width={800} height={450} alt="image2" className="flex-1"/>
+                  <Image src="/PlaceHolderProject2.png" width={800} height={450} alt="image2" className="flex-1"/>
                   <p className="legend">Image 2</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject3.png" width={800} height={450} alt="image3" className="flex-1"/>
+                  <Image src="/PlaceHolderProject3.png" width={800} height={450} alt="image3" className="flex-1"/>
                   <p className="legend">Image 3</p>
               </div>
               <div>
-                  <img src="/PlaceHolderProject4.png" width={800} height={450} alt="image4" className="flex-1"/>
+                  <Image src="/PlaceHolderProject4.png" width={800} height={450} alt="image4" className="flex-1"/>
                   <p className="legend">Image 4</p>
               </div>
 
               <div>
-                  <img src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="flex-1"/>
+                  <Image src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="flex-1"/>
                   <p className="legend">Image 5</p>
               </div>
             </Carousel>
@@ -158,7 +158,7 @@ export function aboutComponent(){
   );
 }
 
-export function footerComponent(){
+export function FooterComponent(){
   return (
     <footer className="flex flex-col md:flex-row justify-between items-center bg-sky-950 text-white p-6 md:py-6 md:px-20">
 
