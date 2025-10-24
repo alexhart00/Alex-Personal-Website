@@ -7,7 +7,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <nav className="flex justify-between items-center bg-sky-950 text-white p-4 md:p-6 drop-shadow-md">
         <p className="text-xl md:text-2xl font-bold">About the Dev</p>
         <Link className="text-xl md:text-2xl font-bold underline hover:text-yellow-400 transition-colors" href="/" prefetch={false}>Back to the Main Page</Link>
@@ -70,7 +70,7 @@ export default function Home() {
         <Link className="text-xl md:text-2xl font-bold underline hover:text-yellow-400 transition-colors" href="/" prefetch={false}>Back to the Main Page</Link>
         <p className="text-xl md:text-2xl font-bold">About the Dev</p>
       </footer>
-    </div>
+    </>
   );
 }
 
