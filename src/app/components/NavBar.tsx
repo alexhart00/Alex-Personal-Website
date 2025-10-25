@@ -20,7 +20,7 @@ export function NavbarComponent(){
         
         <ul className="hidden md:flex gap-6 font-bold">
           <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Profile")}>Profile</li>
-          <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("WorkExperience")}>Work Experience</li>
+          <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Experience")}>Experience</li>
           <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Projects")}>Projects</li>
           <li className="cursor-pointer hover:text-yellow-400" onClick={() => handleClickScroll("Social")}>Social</li>
         </ul>
@@ -28,7 +28,7 @@ export function NavbarComponent(){
         <div className={`absolute top-16 right-4 bg-sky-950 rounded-lg p-4 transition-opacity duration-300 ease-in-out transform outline-4 outline-yellow-600 rounded-lg${isMenuOpen ? "visible opacity-100 z-10" : "invisible opacity-0"}`}>
           <ul className="flex flex-col gap-4 font-bold text-center">
             <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("Profile")}>Profile</li>
-            <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("WorkExperience")}> Work Experience</li>
+            <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("Experience")}>Experience</li>
             <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("Projects")}>Projects</li>
             <li className="bg-sky-900 outline-2 outline-yellow-600 rounded-lg" onClick={() => handleClickScroll("Social")}>Social</li>
           </ul>

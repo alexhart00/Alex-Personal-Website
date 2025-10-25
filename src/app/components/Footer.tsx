@@ -12,7 +12,7 @@ export function FooterComponent(){
         </div>
 
         <div className="flex flex-col items-center md:items-end text-center md:text-right gap-2">
-          <p className="text-sm md:text-lg">Contact me at: Alex&apos;s Email</p>
+          <p className="text-sm md:text-lg">Contact me at: alexhart3000@gmail.com</p>
           <p className="text-sm md:text-lg">© {new Date().getFullYear()} Alex Hart. All rights reserved.</p>
         </div>
 

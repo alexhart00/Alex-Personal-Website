@@ -8,7 +8,7 @@ export function AboutComponent() {
     <main className="flex flex-col items-center bg-zinc-900 pb-20 outline-6 outline-yellow-600 drop-shadow-md relative z-10">
 
       <div id="Profile" className="mt-12 mb-12 items-center w-full max-w-[1000px]">
-        <div className="p-6 text-center md:text-left">
+        <div className="text-xl md:text-2xl p-4 mt-4 mb-16 flex flex-col gap-4 outline-6 outline-yellow-600 rounded-lg bg-sky-950 w-full max-w-[1000px] shadow-yellow-600 shadow-xl">
           <p className="text-3xl md:text-4xl font-bold">Profile</p>
           <p className="text-xl md:text-3xl mt-2">
             I&apos;m Alexander Hart, a Software Engineering graduate from Colorado with a
@@ -19,65 +19,60 @@ export function AboutComponent() {
         </div>
 
         <div className="text-xl md:text-2xl p-4 flex flex-col gap-4 outline-6 outline-yellow-600 rounded-lg bg-sky-950 w-full max-w-[1000px] shadow-yellow-600 shadow-xl">
-          <ul className="text-xl md:text-2xl p-4 flex flex-col gap-8 rounded-lg bg-sky-900 w-full max-w-[1000px] shadow-black shadow-md">
-
-            <li className="font-bold pt-4">Frontend Development</li>
-            <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-lg">
-              <li>HTML</li>
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>Next.js</li>
-              <li>Hydrogen</li>
-              <li>Polaris</li>
+            <p className="font-bold">Frontend Development</p>
+            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+              <li className="pl-4">HTML</li>
+              <li className="pl-4">JavaScript</li>
+              <li className="pl-4">React</li>
+              <li className="pl-4">Next.js</li>
+              <li className="pl-4">Hydrogen</li>
+              <li className="pl-4">Polaris</li>
             </ul>
 
-            <li className="font-bold pt-8">Backend Development</li>
-            <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-lg">
-              <li>Node.js</li>
-              <li>Python</li>
-              <li>C++</li>
-              <li>C#</li>
-              <li>MongoDB</li>
-              <li>GraphQL</li>
+            <p className="font-bold">Backend Development</p>
+            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+              <li className="pl-4">Node.js</li>
+              <li className="pl-4">Python</li>
+              <li className="pl-4">C++</li>
+              <li className="pl-4">C#</li>
+              <li className="pl-4">MongoDB</li>
+              <li className="pl-4">GraphQL</li>
             </ul>
 
-            <li className="font-bold pt-8">Version Control & Deployment</li>
-            <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-lg">
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>Vercel</li>
-              <li>Shopify</li>
+            <p className="font-bold">Version Control & Deployment</p>
+            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+              <li className="pl-4">Git</li>
+              <li className="pl-4">GitHub</li>
+              <li className="pl-4">Vercel</li>
+              <li className="pl-4">Shopify</li>
             </ul>
 
-            <li className="font-bold pt-8">Development Tools</li>
-            <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 text-lg">
-              <li>Visual Studio</li>
-              <li>Visual Studio Code</li>
+            <p className="font-bold">Development Tools</p>
+            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+              <li className="pl-4">Visual Studio</li>
+              <li className="pl-4">Visual Studio Code</li>
             </ul>
 
-            <li className="font-bold pt-8">
-              My Email: <a href="mailto:alexhart3000@gmail.com" className="underline hover:text-yellow-400">alexhart3000@gmail.com</a>
-            </li>
-          </ul>
+            <p className="font-bold">Contact Information</p>
+            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+              <li className="pl-4">
+                My Email: <a href="mailto:alexhart3000@gmail.com" className="underline hover:text-yellow-400">alexhart3000@gmail.com</a>
+              </li>
+            </ul>
         </div>
       </div>
 
-      <div id="WorkExperience" className="mt-6 mb-6 w-full max-w-[1000px]">
-        <div className="p-6 text-center md:text-left">
-          <p className="text-3xl md:text-4xl font-bold">Work Experience</p>
-          <p className="text-xl md:text-3xl mt-2">See where I have worked!</p>
-        </div>
+      <div id="Experience" className="mt-6 mb-6 w-full max-w-[1000px]">
         <div className="outline-6 outline-yellow-600 rounded-lg p-6 w-full max-w-[1000px] bg-sky-950 font-semibold shadow-xl shadow-yellow-600">
-          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md">
+          <p className="text-3xl md:text-4xl font-bold">Experience</p>
+          <p className="text-xl md:text-3xl mt-2">See where I have worked and studied!</p>
+
+          {/* Work Experience */}
+          <h2 className="text-2xl md:text-3xl mt-6 mb-2 font-bold">Work Experience</h2>
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
             <li className="text-xl md:text-2xl flex items-center gap-3">
-              <Image src="https://www.linkedin.com/favicon.ico" width={40} height={40} alt="CompanyNameLogo" className="w-12 h-12 md:w-16 md:h-16" />
-              <span>Company Name</span>
-            </li>
-            <li className="text-xl md:text-2xl">
-              <span>Position: Market Man</span>
-            </li>
-            <li className="text-xl md:text-2xl">
-              <span>Duration: September 2025 - Present</span>
+              <Image src="/FreeLanceIcon.ico" width={40} height={40} alt="CompanyNameLogo" className="w-12 h-12 md:w-16 md:h-16" />
+              <span>Remote Work — Freelance Programmer</span><span>Jan 2024 - Current</span>
             </li>
             <li className="text-xl md:text-2xl self-start">
               <Accordion>
@@ -87,8 +82,100 @@ export function AboutComponent() {
                   key="1"
                   aria-label="Accordion 1"
                 >
+                  <p className="font-thin text-base md:text-lg mb-4">
+                    As a freelance programmer, I collaborate with clients to design and implement custom software solutions tailored to their specific needs. My work covers both front-end and back-end development, where I leverage <span className="font-semibold">Java, JavaScript, React, and Node.js</span> to build responsive, user-friendly applications. I integrate databases efficiently using <span className="font-semibold">SQL</span>, and create robust APIs to ensure smooth communication between systems.
+                  </p>
+
+                  <p className="font-thin text-base md:text-lg mb-4">
+                    Beyond coding, I focus heavily on <span className="font-semibold">debugging</span> and <span className="font-semibold">problem-solving</span>, ensuring that applications are optimized, reliable, and scalable. I follow <span className="font-semibold">agile development practices</span> to stay adaptable and deliver projects on time, while version control with <span className="font-semibold">Git</span> helps me manage and track progress effectively.
+                  </p>
+
                   <p className="font-thin text-base md:text-lg">
-                    Details about my working experience
+                    Working remotely has sharpened my skills in <span className="font-semibold">communication, time management, and collaboration across distributed teams</span>. This independence has also taught me to balance client expectations with technical requirements, consistently producing solutions that are both technically sound and aligned with business goals.
+                  </p>
+
+                </AccordionItem>
+              </Accordion>
+            </li>
+          </ul>
+
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+            <li className="text-xl md:text-2xl flex items-center gap-3">
+              <Image src="/PlatteValleyChurchIcon.ico" width={40} height={40} alt="CompanyNameLogo" className="w-12 h-12 md:w-16 md:h-16" />
+              <span>Remote Work — Mobile Application Developer</span><span>Oct 2025 - Current</span>
+            </li>
+            <li className="text-xl md:text-2xl self-start">
+              <Accordion>
+                <AccordionItem
+                  title={<span className="pl-4 font-bold flex items-center justify-between w-full">More Details</span>}
+                  indicator={<></>}
+                  key="2"
+                  aria-label="Accordion 2"
+                >
+                  <p className="font-thin text-base md:text-lg mb-4">
+                    In my role as a mobile application developer, I specialize in building cross-platform mobile apps using <span className="font-semibold">React Native</span>, enabling seamless performance on both iOS and Android. My work focuses on delivering intuitive, user-friendly interfaces backed by scalable and efficient application logic. I collaborate remotely with clients to translate requirements into functional designs, implementing features that enhance usability and align with modern mobile standards.
+                  </p>
+
+                  <p className="font-thin text-base md:text-lg mb-4">
+                    Beyond development, I integrate APIs, manage application state, and ensure data is handled securely and efficiently. I regularly engage in debugging and performance optimization, pushing apps toward smooth, responsive interactions. Leveraging <span className="font-semibold">Git</span> for version control and following <span className="font-semibold">agile methodologies</span>, I maintain clear communication and adaptability throughout the development lifecycle.
+                  </p>
+
+                  <p className="font-thin text-base md:text-lg">
+                    This role has strengthened my expertise in <span className="font-semibold">mobile UX design, problem-solving, and remote collaboration</span>, while allowing me to deliver applications that not only meet client needs but also provide a polished and engaging experience for end users.
+                  </p>
+                </AccordionItem>
+              </Accordion>
+            </li>
+          </ul>
+
+          {/* Education */}
+          <h2 className="text-2xl md:text-3xl mt-6 mb-2 font-bold">Education</h2>
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+            <li className="text-xl md:text-2xl flex items-center gap-3">
+              <Image src="/UNCOIcon.ico" width={40} height={40} alt="UNCLogo" className="w-12 h-12 md:w-16 md:h-16" />
+              <span>University of Northern Colorado — Bachelor’s Degree, Software Engineering</span>
+              <span>Graduated</span>
+            </li>
+            <li className="text-xl md:text-2xl self-start">
+              <Accordion>
+                <AccordionItem
+                  title={<span className="pl-4 font-bold flex items-center justify-between w-full">More Details</span>}
+                  indicator={<></>}
+                  key="3"
+                  aria-label="Accordion 3"
+                >
+                  <p className="font-thin text-base md:text-lg mb-4">
+                    I earned my <span className="font-semibold">Bachelor’s Degree in Software Engineering</span> from the <span className="font-semibold">University of Northern Colorado</span>. During my studies, I focused on building a strong foundation in programming, software design, and systems development while consistently maintaining academic excellence.
+                  </p>
+
+                  <p className="font-thin text-base md:text-lg">
+                    Achievements include being named to the <span className="font-semibold">Dean’s List</span>, graduating with a <span className="font-semibold">3.97 GPA</span>, and serving as a member of the <span className="font-semibold">National Society of Leadership and Success (NSLS)</span>.
+                  </p>
+                </AccordionItem>
+              </Accordion>
+            </li>
+          </ul>
+
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+            <li className="text-xl md:text-2xl flex items-center gap-3">
+              <Image src="/MCCIcon.ico" width={40} height={40} alt="FMCCLogo" className="w-12 h-12 md:w-16 md:h-16" />
+              <span>Fort Morgan Community College — Associate Degree in Science</span>
+              <span>Graduated</span>
+            </li>
+            <li className="text-xl md:text-2xl self-start">
+              <Accordion>
+                <AccordionItem
+                  title={<span className="pl-4 font-bold flex items-center justify-between w-full">More Details</span>}
+                  indicator={<></>}
+                  key="4"
+                  aria-label="Accordion 4"
+                >
+                  <p className="font-thin text-base md:text-lg mb-4">
+                    I earned my <span className="font-semibold">Associate Degree in Science</span> from <span className="font-semibold">Fort Morgan Community College</span>. This program provided a strong academic foundation in mathematics and science, supporting my transition into advanced studies in software engineering.
+                  </p>
+
+                  <p className="font-thin text-base md:text-lg">
+                    I graduated with high academic achievement, being named to the <span className="font-semibold">Dean’s List</span> and completing the program with a <span className="font-semibold">4.00 GPA</span>.
                   </p>
                 </AccordionItem>
               </Accordion>
@@ -96,6 +183,8 @@ export function AboutComponent() {
           </ul>
         </div>
       </div>
+
+
 
       <div id="Projects" className="mt-6 mb-6 w-full max-w-[1000px]">
         <div className="justify-left p-6">
