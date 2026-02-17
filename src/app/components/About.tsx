@@ -93,7 +93,6 @@ export function AboutComponent() {
           <p className="text-3xl md:text-4xl font-bold">Experience</p>
           <p className="text-xl md:text-3xl mt-2">See where I have worked and studied!</p>
 
-          {/* Work Experience */}
           <h2 className="text-2xl md:text-3xl mt-6 mb-2 font-bold">Work Experience</h2>
           <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
             <li className="text-xl md:text-2xl flex items-center gap-3">
