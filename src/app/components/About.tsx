@@ -1,5 +1,6 @@
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Carousel } from "react-responsive-carousel";
+import Project1 from "../../../public/PlatteValleyApp.png";
 import Project2 from "../../../public/EscapeTheTower.jpg";
 import Project3 from "../../../public/SurveyoftheCurbanator.png"
 import Image from "next/image";
@@ -214,7 +215,7 @@ export function AboutComponent() {
       <div id="Projects" className="mt-6 mb-6 w-full max-w-[1000px]">
         <div className="justify-left p-6">
           <p className="text-3xl sm:text-4xl font-bold">Projects</p>
-          <p className="text-xl sm:text-2xl">Alex&apos;s Marketing Projects:</p>
+          <p className="text-xl sm:text-2xl">Alex&apos;s Software Projects:</p>
         </div>
         <div className="flex flex-col items-center outline-6 outline-yellow-600 rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] bg-sky-950 font-bold shadow-yellow-600 shadow-xl">
           <div className="flex flex-col items-center rounded-lg p-4 w-full max-w-full sm:max-w-[1000px] font-bold bg-sky-900 text-white shadow-black shadow-md">
@@ -224,17 +225,17 @@ export function AboutComponent() {
               showIndicators={false}
               infiniteLoop
               autoPlay
-              interval={3000}
-              transitionTime={1000}
+              interval={10000}
+              transitionTime={2000}
               renderThumbs={() => [
-                <img key="1" src="/PlaceHolderProject1.png" alt="thumb1" />,
+                <img key="1" src={Project1.src} alt="thumb1" />,
                 <img key="2" src={Project2.src} alt="thumb2" />,
                 <img key="3" src={Project3.src} alt="thumb3" />,
               ]}
             >
               <div>
-                <Image src="/PlaceHolderProject1.png" width={854} height={480} alt="image1" className="flex-1" />
-                <p className="legend">Image 1</p>
+                <Image src={Project1} width={854} height={480} alt="image1" className="flex-1" />
+                <p className="legend">Platte Valley Baptist Church Moblie App</p>
               </div>
               <div>
                 <Image src={Project2} width={854} height={480} alt="image2" className="flex-1" />
