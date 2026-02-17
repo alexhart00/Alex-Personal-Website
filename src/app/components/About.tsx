@@ -1,5 +1,7 @@
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Carousel } from "react-responsive-carousel";
+import Project2 from "../../../public/EscapeTheTower.jpg";
+import Project3 from "../../../public/SurveyoftheCurbanator.png"
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -19,46 +21,69 @@ export function AboutComponent() {
         </div>
 
         <div className="text-xl md:text-2xl p-4 flex flex-col gap-4 outline-6 outline-yellow-600 rounded-lg bg-sky-950 w-full max-w-[1000px] shadow-yellow-600 shadow-xl">
-            <p className="font-bold">Frontend Development</p>
-            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
-              <li className="pl-4">HTML</li>
-              <li className="pl-4">JavaScript</li>
-              <li className="pl-4">React</li>
-              <li className="pl-4">Next.js</li>
-              <li className="pl-4">Hydrogen</li>
-              <li className="pl-4">Polaris</li>
-            </ul>
+          <p className="font-bold">Frontend Development</p>
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+            <li className="pl-4">HTML</li>
+            <li className="pl-4">CSS</li>
+            <li className="pl-4">Tailwind CSS</li>
+            <li className="pl-4">JavaScript</li>
+            <li className="pl-4">TypeScript</li>
+            <li className="pl-4">React</li>
+            <li className="pl-4">Next.js</li>
+            <li className="pl-4">Redux / Context API</li>
+            <li className="pl-4">React Native</li>
+            <li className="pl-4">Hydrogen (Shopify)</li>
+            <li className="pl-4">Polaris (Shopify UI)</li>
+          </ul>
 
-            <p className="font-bold">Backend Development</p>
-            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
-              <li className="pl-4">Node.js</li>
-              <li className="pl-4">Python</li>
-              <li className="pl-4">C++</li>
-              <li className="pl-4">C#</li>
-              <li className="pl-4">MongoDB</li>
-              <li className="pl-4">GraphQL</li>
-            </ul>
+          <p className="font-bold">Backend Development</p>
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+            <li className="pl-4">Node.js</li>
+            <li className="pl-4">Express.js</li>
+            <li className="pl-4">REST APIs</li>
+            <li className="pl-4">GraphQL</li>
+            <li className="pl-4">MongoDB</li>
+            <li className="pl-4">Mongoose</li>
+            <li className="pl-4">Python</li>
+            <li className="pl-4">C++</li>
+            <li className="pl-4">C#</li>
+            <li className="pl-4">Authentication (JWT, OAuth)</li>
+          </ul>
 
-            <p className="font-bold">Version Control & Deployment</p>
-            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
-              <li className="pl-4">Git</li>
-              <li className="pl-4">GitHub</li>
-              <li className="pl-4">Vercel</li>
-              <li className="pl-4">Shopify</li>
-            </ul>
+          <p className="font-bold">Version Control & Deployment</p>
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+            <li className="pl-4">Git</li>
+            <li className="pl-4">GitHub</li>
+            <li className="pl-4">GitHub Actions (CI/CD)</li>
+            <li className="pl-4">Vercel</li>
+            <li className="pl-4">Shopify Store Deployment</li>
+          </ul>
 
-            <p className="font-bold">Development Tools</p>
-            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
-              <li className="pl-4">Visual Studio</li>
-              <li className="pl-4">Visual Studio Code</li>
-            </ul>
+          <p className="font-bold">Databases & Cloud</p>
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+            <li className="pl-4">MongoDB Atlas</li>
+            <li className="pl-4">Firebase</li>
+            <li className="pl-4">Cloud Functions</li>
+            <li className="pl-4">Cloud Storage</li>
+            <li className="pl-4">Basic AWS Services</li>
+          </ul>
 
-            <p className="font-bold">Contact Information</p>
-            <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
-              <li className="pl-4">
-                My Email: <a href="mailto:alexhart3000@gmail.com" className="underline hover:text-yellow-400">alexhart3000@gmail.com</a>
-              </li>
-            </ul>
+          <p className="font-bold">Development Tools</p>
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+            <li className="pl-4">Visual Studio</li>
+            <li className="pl-4">Visual Studio Code</li>
+            <li className="pl-4">Chrome DevTools</li>
+            <li className="pl-4">Github Copilot</li>
+            <li className="pl-4">npm / Yarn</li>
+          </ul>
+
+
+          <p className="font-bold">Contact Information</p>
+          <ul className="p-4 gap-6 md:gap-8 rounded-lg bg-sky-900 text-white shadow-black shadow-md m-4">
+            <li className="pl-4">
+              My Email: <a href="mailto:alexhart3000@gmail.com" className="underline hover:text-yellow-400">alexhart3000@gmail.com</a>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -83,7 +108,7 @@ export function AboutComponent() {
                   aria-label="Accordion 1"
                 >
                   <p className="font-thin text-base md:text-lg mb-4">
-                    As a freelance programmer, I collaborate with clients to design and implement custom software solutions tailored to their specific needs. My work covers both front-end and back-end development, where I leverage <span className="font-semibold">Java, JavaScript, React, and Node.js</span> to build responsive, user-friendly applications. I integrate databases efficiently using <span className="font-semibold">SQL</span>, and create robust APIs to ensure smooth communication between systems.
+                    As a freelance programmer, I collaborate with clients to design and implement custom software solutions tailored to their specific needs. My work covers both front-end and back-end development, where I leverage <span className="font-semibold">React, JavaScript, and Node.js</span> to build responsive, user-friendly applications. I integrate databases efficiently using <span className="font-semibold">Firebase</span>, and create robust APIs to ensure smooth communication between systems.
                   </p>
 
                   <p className="font-thin text-base md:text-lg mb-4">
@@ -117,11 +142,11 @@ export function AboutComponent() {
                   </p>
 
                   <p className="font-thin text-base md:text-lg mb-4">
-                    Beyond development, I integrate APIs, manage application state, and ensure data is handled securely and efficiently. I regularly engage in debugging and performance optimization, pushing apps toward smooth, responsive interactions. Leveraging <span className="font-semibold">Git</span> for version control and following <span className="font-semibold">agile methodologies</span>, I maintain clear communication and adaptability throughout the development lifecycle.
+                    Beyond development, I integrate APIs, manage application state, and ensure data is handled securely and efficiently. I regularly engage in debugging and performance optimization, pushing apps toward smooth, responsive interactions. Leveraging <span className="font-semibold">Firebase Features</span> such as storage, realtime database, authentication, and cloud functions for the database.<span className="font-semibold">Git</span> for version control and following <span className="font-semibold">agile methodologies</span>, I maintain clear communication and adaptability throughout the development lifecycle.
                   </p>
 
                   <p className="font-thin text-base md:text-lg">
-                    This role has strengthened my expertise in <span className="font-semibold">mobile UX design, problem-solving, and remote collaboration</span>, while allowing me to deliver applications that not only meet client needs but also provide a polished and engaging experience for end users.
+                    This role has strengthened my expertise in <span className="font-semibold">mobile UX design, top-level decision making, and remote collaboration</span>, while allowing me to deliver applications that not only meet client needs but also provide a polished and engaging experience for end users.
                   </p>
                 </AccordionItem>
               </Accordion>
@@ -203,31 +228,19 @@ export function AboutComponent() {
               transitionTime={1000}
               renderThumbs={() => [
                 <img key="1" src="/PlaceHolderProject1.png" alt="thumb1" />,
-                <img key="2" src="/PlaceHolderProject2.png" alt="thumb2" />,
-                <img key="3" src="/PlaceHolderProject3.png" alt="thumb3" />,
-                <img key="4" src="/PlaceHolderProject4.png" alt="thumb4" />,
-                <img key="5" src="/PlaceHolderProject5.png" alt="thumb5" />,
+                <img key="2" src={Project2.src} alt="thumb2" />,
+                <img key="3" src={Project3.src} alt="thumb3" />,
               ]}
             >
               <div>
-                <Image src="/PlaceHolderProject1.png" width={800} height={450} alt="image1" className="flex-1" />
+                <Image src="/PlaceHolderProject1.png" width={854} height={480} alt="image1" className="flex-1" />
                 <p className="legend">Image 1</p>
               </div>
               <div>
-                <Image src="/PlaceHolderProject2.png" width={800} height={450} alt="image2" className="flex-1" />
-                <p className="legend">Image 2</p>
+                <Image src={Project2} width={854} height={480} alt="image2" className="flex-1" />
               </div>
               <div>
-                <Image src="/PlaceHolderProject3.png" width={800} height={450} alt="image3" className="flex-1" />
-                <p className="legend">Image 3</p>
-              </div>
-              <div>
-                <Image src="/PlaceHolderProject4.png" width={800} height={450} alt="image4" className="flex-1" />
-                <p className="legend">Image 4</p>
-              </div>
-              <div>
-                <Image src="/PlaceHolderProject5.png" width={800} height={450} alt="image5" className="flex-1" />
-                <p className="legend">Image 5</p>
+                <Image src={Project3} width={854} height={480} alt="image3" className="flex-1" />
               </div>
             </Carousel>
           </div>
