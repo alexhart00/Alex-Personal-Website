@@ -4,7 +4,7 @@ export default function PrivacyPage() {
             <header className="space-y-2">
                 <h1 className="text-3xl font-bold">Privacy Policy</h1>
                 <p className="text-sm">
-                    <strong>Last Updated:</strong> 2/17/2026 <br />
+                    <strong>Last Updated:</strong> 2/23/2026 <br />
                     <strong>App Name:</strong> Platte Valley Baptist Church App
                 </p>
             </header>
@@ -81,7 +81,7 @@ export default function PrivacyPage() {
                         <h3 className="text-lg font-semibold">C. Prayer Wall Submissions</h3>
                         <p>
                             Currently only the Admin can make new prayer requests,
-                            however this will still apply if a request is made.
+                            however this will still apply if a request is made to them.
                         </p>
                         <p>If you make a prayer request, the App will collect:</p>
                         <ul className="list-disc pl-6 space-y-1">
@@ -103,7 +103,7 @@ export default function PrivacyPage() {
                             <li>Operating system</li>
                             <li>App version</li>
                             <li>Authentication identifiers</li>
-                            <li>Crash logs (if applicable)</li>
+                            <li>Crash logs</li>
                         </ul>
                     </div>
                 </section>
@@ -116,11 +116,11 @@ export default function PrivacyPage() {
                         <li>Authenticate users</li>
                         <li>Display approved directory information to approved users</li>
                         <li>Display prayer requests</li>
-                        <li>Communicate important updates</li>
+                        <li>Maintain a database backup</li>
                         <li>Improve functionality and security</li>
                         <li>Comply with legal obligations</li>
                     </ul>
-                    <p>The App do not sell, rent, or trade your personal information.</p>
+                    <p>The App does not sell, rent, or trade your personal information.</p>
                 </section>
 
                 <section className="space-y-3">
@@ -132,14 +132,15 @@ export default function PrivacyPage() {
                         </li>
                         <li>Prayer requests are visible within the App to authenticated users.</li>
                         <li>Administrators may review, edit, approve, or remove content as necessary.</li>
+                        <li>Members may edit, or remove thier own created entries as necessary.</li>
                     </ul>
                 </section>
 
                 <section className="space-y-3">
                     <h2 className="text-xl font-semibold">5. Data Storage and Security</h2>
                     <p>
-                        the App use secure third-party services (such as Firebase by Google) to
-                        store and manage data. the App implement reasonable security measures,
+                        The App use secure third-party services (such as Firebase by Google) to
+                        store, backup and manage data. The App implement strong security measures,
                         including authentication controls and restricted access.
                     </p>
                     <p>However, no method of transmission or storage is 100% secure.</p>
@@ -150,16 +151,17 @@ export default function PrivacyPage() {
                     <p>
                         This App is intended for church members and families. Parents or
                         guardians may submit dependent information for children as part of
-                        directory participation. the App do not knowingly collect personal
-                        information from children outside of information submitted by a
-                        parent or guardian.
+                        directory participation and this only includes name and afflication.
+                        The App does not collect personal information from children
+                        outside of information submitted by a parent or guardian.
                     </p>
-                    <p>If you believe information has been collected improperly, please contact us.</p>
+                    <p>If you believe information has been collected improperly, please contact us. An email has been provided at the bottom.</p>
                 </section>
 
                 <section className="space-y-3" id="account-deletion">
                     <h2 className="text-xl font-semibold">7. Account and Data Deletion</h2>
                     <p>You may request deletion of your account and associated data at any time.</p>
+                    <p>Either inside of the app with the "delete account" button found in the User Entry List or by email request.</p>
                     <p>
                         <strong>Email:</strong> alexhart3000@gmail.com <br />
                         <strong>Subject Line:</strong> Account Deletion Request
@@ -175,9 +177,10 @@ export default function PrivacyPage() {
 
                 <section className="space-y-3">
                     <h2 className="text-xl font-semibold">8. Data Retention</h2>
-                    <p>the App retain personal information only as long as necessary to:</p>
+                    <p>The App retain personal information only as long as necessary to:</p>
                     <ul className="list-disc pl-6 space-y-1">
                         <li>Maintain active membership records</li>
+                        <li>Maintain acurrate backups</li>
                         <li>Provide directory services</li>
                         <li>Meet legal obligations</li>
                     </ul>
@@ -211,6 +214,7 @@ export default function PrivacyPage() {
                         <strong>Alexander Hart</strong>
                         <br />
                         <strong>Email:</strong> alexhart3000@gmail.com
+                        <p>Thank you and please enjoy the app.</p>
                     </p>
                 </section>
             </section>
