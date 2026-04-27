@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 export function ProfileComponent() {
-  const maxImages = 3;
+  const maxImages = 2;
   const [profilePhotoIndex, setProfilePhotoIndex] = useState(0);
   const handleClick = () => setProfilePhotoIndex((prevIndex) => (prevIndex + 1) % maxImages);
 

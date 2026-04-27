@@ -6,7 +6,7 @@ export function FooterComponent() {
     <footer className="flex flex-col md:flex-row justify-between items-center bg-sky-950 text-white p-6 md:py-6 md:px-20">
 
       <div id="Social" className="flex items-center justify-center mb-4 md:mb-0 md:justify-start">
-        <Link href="https://www.linkedin.com/in/Alex-o-scott/" prefetch={false}>
+        <Link href="https://www.linkedin.com/in/alexander-hart-324064196/" prefetch={false}>
           <Image src="https://www.linkedin.com/favicon.ico" width={100} height={100} alt="LinkedIn Logo" className="w-10 h-10 md:w-12 md:h-12" />
         </Link>
       </div>
